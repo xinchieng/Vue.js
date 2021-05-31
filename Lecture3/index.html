@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="myApp">
+        <h3>游戏列表</h3>
+        <!--不确定是不是2017年发卖，在这里这是了个if statement分辨--> 
+        <!--Virtual DOM (false的时候，连div也不会显现)-->
+        <div v-if="seen">2017最新发卖</div>
+        <ol>
+            <li v-for="game in games">{{game.title}} / {{game.price}}元</li>
+        </ol>
+    </div>
+    <script>
+        var myApp = new Vue({
+            el: '#myApp',
+            data: {
+                // 目前设置为true
+                seen: true,
+                //[]代表数组
+                games: [
+                    {title:'xxx',price:400},
+                    {title:'yyy',price:380},
+                    {title:'zzz',price:99},
+                ],
+            },
+        });
+    </script>
+</body>
+
+</html>

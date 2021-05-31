@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="myApp"> 
+		{{ message }} 
+	</div>
+	<script>
+		var myApp = new Vue({
+  			// 记载要对哪个id的代码框进行使用（可以理解为“选择器”）
+ 			 el: '#myApp',
+  			//对数据进行绑定
+  			data: {
+   			message: 'Hello Vue.js World!'
+  			}
+		});
+	</script>
+</body>
+
+</html>
